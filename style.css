@@ -1,0 +1,348 @@
+@import url('https://fonts.cdnfonts.com/css/proxima-nova-condensed');
+@import url('https://fonts.cdnfonts.com/css/rubik');
+h1,
+h2,
+h6,
+nav,
+h5,
+button,
+p {
+    font-family: 'Rubik', sans-serif;
+}
+
+{
+    font-family: 'Proxima Nova Condensed', sans-serif;
+    font-family: 'Proxima Nova Extra Condensed', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+i {
+    margin-right: 10px;
+}
+
+
+/*----------bootstrap-navbar-css------------*/
+
+.navbar-logo {
+    /* padding: 15px; */
+    color: #fff;
+}
+
+.navbar-mainbg {
+    /* background-color: #5161ce; */
+    padding: 0px;
+}
+
+#navbarSupportedContent {
+    overflow: hidden;
+    position: relative;
+}
+
+#navbarSupportedContent ul {
+    padding: 0px;
+    margin: 0px;
+    background-color: rgb(240, 234, 234);
+}
+
+#navbarSupportedContent ul li a i {
+    margin-right: 10px;
+}
+
+#navbarSupportedContent li {
+    list-style-type: none;
+    float: left;
+}
+
+#navbarSupportedContent ul li a {
+    color: #000;
+    text-decoration: none;
+    font-size: 15px;
+    display: block;
+    padding: 18px 11px;
+    transition-duration: 0.6s;
+    transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    position: relative;
+}
+
+#navbarSupportedContent>ul>li.active>a {
+    color: #fff;
+    background-color: transparent;
+    transition: all 0.7s;
+}
+
+#navbarSupportedContent a:not(:only-child):after {
+    content: "\f105";
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    font-size: 14px;
+    font-family: "Font Awesome 5 Free";
+    display: inline-block;
+    padding-right: 3px;
+    vertical-align: middle;
+    font-weight: 900;
+    transition: 0.5s;
+}
+
+#navbarSupportedContent .active>a:not(:only-child):after {
+    transform: rotate(90deg);
+}
+
+.hori-selector {
+    display: inline-block;
+    position: absolute;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    transition-duration: 0.6s;
+    transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    color: #fff;
+    background-color: #000;
+    border-radius: 30px;
+    /* border-top-left-radius: 15px; */
+    /* border-top-right-radius: 15px; */
+    /* margin-top: 10px; */
+}
+
+
+/* .hori-selector .right,
+.hori-selector .left {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background-color: #fff;
+    bottom: 10px;
+} */
+
+.hori-selector .right {
+    right: -25px;
+}
+
+.hori-selector .left {
+    left: -25px;
+}
+
+.hori-selector .right:before,
+.hori-selector .left:before {
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    /* background-color: #5161ce; */
+}
+
+.hori-selector .right:before {
+    bottom: 0;
+    right: -25px;
+}
+
+.hori-selector .left:before {
+    bottom: 0;
+    left: -25px;
+}
+
+@media(min-width: 992px) {
+    /* #navbarSupportedContent ul {
+        background-color: unset;
+    } */
+    .navbar-expand-custom {
+        -ms-flex-flow: row nowrap;
+        flex-flow: row nowrap;
+        -ms-flex-pack: start;
+        justify-content: flex-start;
+    }
+    .navbar-expand-custom .navbar-nav {
+        -ms-flex-direction: row;
+        flex-direction: row;
+    }
+    .navbar-expand-custom .navbar-toggler {
+        display: none;
+    }
+    .navbar-expand-custom .navbar-collapse {
+        display: -ms-flexbox!important;
+        display: flex!important;
+        -ms-flex-preferred-size: auto;
+        flex-basis: auto;
+    }
+    .youtube-img {
+        position: relative;
+        margin-top: -50px;
+    }
+    .border-count {
+        margin-top: 70px;
+    }
+}
+
+@media (max-width: 991px) {
+    #navbarSupportedContent ul {
+        background-color: unset;
+    }
+    #navbarSupportedContent ul li a {
+        padding: 12px 30px;
+    }
+    .hori-selector {
+        margin-top: 0px;
+        margin-left: 10px;
+        border-radius: 0;
+        border-top-left-radius: 25px;
+        border-bottom-left-radius: 25px;
+    }
+    .hori-selector .left,
+    .hori-selector .right {
+        right: 10px;
+    }
+    .hori-selector .left {
+        top: -25px;
+        left: auto;
+    }
+    .hori-selector .right {
+        bottom: -25px;
+    }
+    .hori-selector .left:before {
+        left: -25px;
+        top: -25px;
+    }
+    .hori-selector .right:before {
+        bottom: -25px;
+        left: -25px;
+    }
+}
+
+
+/* BUTTON */
+
+.button2 {
+    padding: 10px 20px;
+    font-size: 1.1rem;
+    background-color: rgb(255, 209, 81);
+    border: none;
+    color: #000;
+    position: relative;
+    width: 120px;
+    height: 45px;
+    transition: background-color 0.2s ease-in, all 0.15s ease-in;
+}
+
+.button2::after {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    content: "We're Hiring";
+    width: 120px;
+    height: 45px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(5px, 5px);
+    background-color: rgb(255, 187, 0);
+    transition: all 0.15s ease-in;
+}
+
+.button3::after {
+    content: 'Get Connected'
+}
+
+.button4::after {
+    content: "Let's Connect";
+}
+
+.button2:hover::after {
+    transform: translate(-5px, -5px);
+}
+
+.button2:hover {
+    transform: translate(5px, 5px);
+}
+
+.button2:active::after {
+    background-color: rgb(207, 152, 0);
+}
+
+
+/* COUNTER */
+
+.border-count {
+    border: 15px solid rgb(240, 234, 234);
+}
+
+.zagolowok {
+    padding-left: 8px;
+}
+
+.zagolowok::before {
+    content: "";
+    position: absolute;
+    background-color: #ffbb00;
+    width: 24px;
+    top: 91%;
+    height: 5px;
+    left: -4px;
+}
+
+
+/* Services */
+
+.background {
+    background-color: white;
+}
+
+.card-service {
+    position: relative;
+}
+
+.arrow {
+    position: absolute;
+    background-color: rgb(240, 234, 234);
+    padding: 0 0 15px 15px;
+    right: 0;
+    top: 0;
+}
+
+.border-arrow {
+    background-color: #000;
+    /* border: 15px solid rgb(240, 234, 234); */
+}
+
+
+/* PORTFOLIO */
+
+.portfolio {
+    background-color: rgb(29, 27, 27);
+}
+
+.portfolios {
+    position: relative;
+}
+
+.link {
+    /* display: none; */
+    background-color: #fff;
+    position: absolute;
+    /* top: 0; */
+    left: 25px;
+    padding: 15px 50px;
+    bottom: 15%;
+    right: 25px;
+    transition: .2s ease-in-out;
+    opacity: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.portfolios:hover .link {
+    opacity: 1;
+    transition: .5s ease-in-out;
+    z-index: 99999;
+}
+
+.portfolios:hover .port {
+    background-color: black;
+    opacity: 85%;
+    transition: .3s ease-in-out;
+}
